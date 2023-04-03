@@ -17,10 +17,10 @@ html {
   box-sizing: inherit;
 }
 
-*:focus {
-  outline: 2px dashed var(--text-color);
-  outline-offset: 3px;
-}
+// *:focus {
+//   outline: 2px dashed var(--text-color);
+//   outline-offset: 3px;
+// }
 
 img {
   display: block;
@@ -131,6 +131,60 @@ body {
   line-height: normal;
   margin-top: 0;
   margin-bottom: 40px;
+}
+
+.page__switch {
+  margin-bottom: 64px;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.switch__monthly-input:checked ~ .switch__control .switch__circle {
+  margin-left: 24px;
+}
+
+.switch__anually-input:checked ~ .switch__control .switch__control-monthly,
+.switch__monthly-input:checked~.switch__control .switch__control-anually {
+  z-index: 5;
+}
+.switch__control {
+  width: 56px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #696EDD;
+  background-image: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+  padding: 4px;
+  margin: 0 24px;
+  position: relative;
+}
+
+.switch__circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: margin .2s ease;
+}
+
+.switch__control-anually, .switch__control-monthly {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.switch__label {
+  cursor: pointer;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .page__inner {

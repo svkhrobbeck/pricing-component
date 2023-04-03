@@ -24,7 +24,28 @@
     <main class="main-content">
       <div class="page container">
         <h1 class="page__title">Our Pricing</h1>
-        <div>Switch</div>
+        <div class="page__switch switch">
+          <input
+            class="switch__anually-input visually-hidden"
+            type="radio"
+            name="switch__page"
+            id="switch-anually"
+          />
+          <input
+            class="switch__monthly-input visually-hidden"
+            type="radio"
+            name="switch__page"
+            id="switch-monthly"
+          />
+
+          <label class="switch__label" for="switch-anually">Anually</label>
+          <div class="switch__control">
+            <div class="switch__circle"></div>
+            <label class="switch__control-anually" for="switch-anually"></label>
+            <label class="switch__control-monthly" for="switch-monthly"></label>
+          </div>
+          <label class="switch__label" for="switch-monthly">Monthly</label>
+        </div>
         <div class="page__inner">
           <section class="page-plan">
             <h3 class="page-plan__heading">Basic</h3>
@@ -37,7 +58,9 @@
               <li class="page-plan__feature">2 Users Allowed</li>
               <li class="page-plan__feature">Send up to 3 GB</li>
             </ul>
-            <button class="button button--block button--primary">Learn more</button>
+            <button class="button button--block button--primary">
+              Learn more
+            </button>
           </section>
           <section class="page-plan page-plan--featured">
             <h3 class="page-plan__heading">Professional</h3>
@@ -50,7 +73,9 @@
               <li class="page-plan__feature">5 Users Allowed</li>
               <li class="page-plan__feature">Send up to 10 GB</li>
             </ul>
-            <button class="button button--block button--featured">Learn more</button>
+            <button class="button button--block button--featured">
+              Learn more
+            </button>
           </section>
           <section class="page-plan">
             <h3 class="page-plan__heading">Master</h3>
@@ -63,7 +88,9 @@
               <li class="page-plan__feature">10 Users Allowed</li>
               <li class="page-plan__feature">Send up to 20 GB</li>
             </ul>
-            <button class="button button--block button--primary">Learn more</button>
+            <button class="button button--block button--primary">
+              Learn more
+            </button>
           </section>
         </div>
       </div>
