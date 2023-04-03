@@ -93,21 +93,21 @@ body {
 }
 
 .button--primary {
-  background-color: #696EDD;
-  background-image: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+  background-color: #696edd;
+  background-image: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
   color: #fff;
 
   &:hover {
     background-color: transparent;
     background-image: none;
-    border-color: #696EDD;
-    color: #696EDD;
+    border-color: #696edd;
+    color: #696edd;
   }
 }
 
 .button--featured {
   background-color: #fff;
-  color: #696EDD;
+  color: #696edd;
 
   &:hover {
     background-color: transparent;
@@ -148,15 +148,15 @@ body {
 }
 
 .switch__anually-input:checked ~ .switch__control .switch__control-monthly,
-.switch__monthly-input:checked~.switch__control .switch__control-anually {
+.switch__monthly-input:checked ~ .switch__control .switch__control-anually {
   z-index: 5;
 }
 .switch__control {
   width: 56px;
   height: 32px;
   border-radius: 16px;
-  background-color: #696EDD;
-  background-image: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+  background-color: #696edd;
+  background-image: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
   padding: 4px;
   margin: 0 24px;
   position: relative;
@@ -167,10 +167,11 @@ body {
   height: 24px;
   border-radius: 50%;
   background-color: #fff;
-  transition: margin .2s ease;
+  transition: margin 0.2s ease;
 }
 
-.switch__control-anually, .switch__control-monthly {
+.switch__control-anually,
+.switch__control-monthly {
   position: absolute;
   top: 0;
   left: 0;
@@ -192,6 +193,14 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+
+  @media only screen and (max-width: $tablet-l) {
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    flex-direction: column;
+  }
 }
 
 .page-plan {
@@ -199,6 +208,7 @@ body {
   flex-grow: 1;
   background-color: #fff;
   padding: 32px;
+  box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
 
   &:first-child {
     border-top-left-radius: 10px;
@@ -208,6 +218,16 @@ body {
   &:last-child {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    max-width: none;
+    width: 100%;
+    border-radius: 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -220,8 +240,18 @@ body {
   background-color: #696edd;
   background-image: linear-gradient(135.06deg, #a2a7f0 -0.05%, #696edd 100.05%);
 
-  .page-plan__features, .page-plan__feature {
+  .page-plan__features,
+  .page-plan__feature {
     border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  @media only screen and (max-width: $tablet-l) {
+    order: 1;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    order: 0;
   }
 }
 
